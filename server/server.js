@@ -4,7 +4,10 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const cors = require('cors');
 const { errorHandler } = require('./middleware/errorMiddleware');
+const connectToDb = require('./config/db');
+const colors = require('colors');
 
+connectToDb();
 const app = express();
 //middleware
 app.use(express.json());
