@@ -16,6 +16,7 @@ app.use(cors());
 
 //routes - connection
 app.use('/api/goals', require('./routes/goalRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
